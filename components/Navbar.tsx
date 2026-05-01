@@ -127,6 +127,7 @@ export default function Navbar() {
                   <img
                     src={session.user.image || "https://i.pravatar.cc/80"}
                     alt="avatar"
+                    referrerPolicy="no-referrer"
                     className="w-11 h-11 rounded-full object-cover"
                   />
                   <div>
