@@ -90,24 +90,33 @@ export default function HomePage() {
           />
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="card bg-base-100 shadow p-6">
-              <h3 className="font-bold text-xl">Make a Routine</h3>
-              <p className="mt-2 text-gray-500">
-                Study every day at a fixed time to build consistency.
+            <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
+                ⏰
+              </div>
+              <h3 className="font-black text-xl">Time Management</h3>
+              <p className="mt-3 text-gray-500 leading-relaxed">
+                Study every day at a fixed time to build consistency and avoid last-minute pressure.
               </p>
             </div>
 
-            <div className="card bg-base-100 shadow p-6">
-              <h3 className="font-bold text-xl">Practice Projects</h3>
-              <p className="mt-2 text-gray-500">
-                Build real projects after each lesson to improve faster.
+            <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
+                🛠️
+              </div>
+              <h3 className="font-black text-xl">Practice Projects</h3>
+              <p className="mt-3 text-gray-500 leading-relaxed">
+                Build real projects after each lesson to improve faster and gain practical experience.
               </p>
             </div>
 
-            <div className="card bg-base-100 shadow p-6">
-              <h3 className="font-bold text-xl">Take Notes</h3>
-              <p className="mt-2 text-gray-500">
-                Write important concepts in your own words.
+            <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
+                📝
+              </div>
+              <h3 className="font-black text-xl">Study Techniques</h3>
+              <p className="mt-3 text-gray-500 leading-relaxed">
+                Take notes, revise concepts regularly, and explain topics in your own words.
               </p>
             </div>
           </div>

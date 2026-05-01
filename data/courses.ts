@@ -7,7 +7,7 @@ export const courses = [
     rating: 4.8,
     level: "Beginner",
     description: "Learn full-stack web development from scratch.",
-    image: "https://i.postimg.cc/9fSKb4KH/course1.jpg",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     category: "Development",
   },
   {
@@ -18,7 +18,7 @@ export const courses = [
     rating: 4.7,
     level: "Intermediate",
     description: "Master user interface and user experience design.",
-    image: "https://i.postimg.cc/VLh5D8xR/course2.jpg",
+    image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
     category: "Design",
   },
   {
@@ -29,7 +29,7 @@ export const courses = [
     rating: 4.6,
     level: "Beginner",
     description: "Grow brands using modern digital marketing.",
-    image: "https://i.postimg.cc/sx3XZJg9/course3.jpg",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     category: "Marketing",
   },
   {
@@ -40,7 +40,7 @@ export const courses = [
     rating: 4.9,
     level: "Advanced",
     description: "Build modern web apps with React and Next.js.",
-    image: "https://i.postimg.cc/8zP4R1yP/course4.jpg",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
     category: "Development",
   },
   {
@@ -51,7 +51,7 @@ export const courses = [
     rating: 4.5,
     level: "Beginner",
     description: "Learn design principles, color, and typography.",
-    image: "https://i.postimg.cc/fy9DzL3h/course5.jpg",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
     category: "Design",
   },
   {
@@ -62,7 +62,7 @@ export const courses = [
     rating: 4.4,
     level: "Beginner",
     description: "Improve your communication and presentation skills.",
-    image: "https://i.postimg.cc/ZK6D7cW1/course6.jpg",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
     category: "Business",
   },
 ];
