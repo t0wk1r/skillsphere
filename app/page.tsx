@@ -4,6 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 import { courses } from "@/data/courses";
 import { instructors } from "@/data/instructors";
 import AnimatedSection from "@/components/AnimatedSection";
+import { Clock, Wrench, NotebookPen } from "lucide-react";
 
 export default function HomePage() {
   const popularCourses = [...courses]
@@ -92,7 +93,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
-                ⏰
+                <Clock size={28} />
               </div>
               <h3 className="font-black text-xl">Time Management</h3>
               <p className="mt-3 text-gray-500 leading-relaxed">
@@ -102,7 +103,7 @@ export default function HomePage() {
 
             <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
-                🛠️
+                <Wrench size={28} />
               </div>
               <h3 className="font-black text-xl">Practice Projects</h3>
               <p className="mt-3 text-gray-500 leading-relaxed">
@@ -112,7 +113,7 @@ export default function HomePage() {
 
             <div className="group bg-base-100 rounded-3xl p-7 border border-base-300 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
               <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center text-2xl mb-5 group-hover:bg-primary group-hover:text-white transition">
-                📝
+                <NotebookPen size={28} />
               </div>
               <h3 className="font-black text-xl">Study Techniques</h3>
               <p className="mt-3 text-gray-500 leading-relaxed">
