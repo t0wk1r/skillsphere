@@ -31,9 +31,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto navbar px-4">
         <div className="navbar-start">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-2xl bg-primary text-primary-content flex items-center justify-center font-bold shadow">
+            {/* <div className="w-10 h-10 rounded-2xl bg-primary text-primary-content flex items-center justify-center font-bold shadow">
               S
-            </div>
+            </div> */}
             <span className="text-2xl font-black tracking-tight">
               Skill<span className="text-primary">Sphere</span>
             </span>
