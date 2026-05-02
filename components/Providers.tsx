@@ -6,7 +6,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
       {children}
-      <Toaster position="top-right" richColors />
+      <Toaster position="top-right" richColors duration={1500} />
     </>
   );
 }
