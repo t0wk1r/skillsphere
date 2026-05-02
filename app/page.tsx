@@ -18,33 +18,65 @@ export default function HomePage() {
   return (
     <div>
       <AnimatedSection>
-        <section className="hero-gradient py-20 px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <section className="relative overflow-hidden px-4 py-20 md:py-24 bg-gradient-to-br from-indigo-50 via-pink-50 to-cyan-50">
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-pink-300/30 rounded-full blur-3xl"></div>
+
+          <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="badge badge-primary mb-4">
-                Online Learning Platform
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 shadow-sm text-primary font-semibold mb-5">
+                🎓 Online Learning Platform
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Upgrade Your Skills Today 🚀
+              <h1 className="text-4xl md:text-6xl font-black leading-tight text-slate-900">
+                Upgrade Your Skills
+                <span className="block text-primary">Today</span>
               </h1>
 
-              <p className="py-6 text-gray-600">
-                Learn from industry experts and enroll in skill-based courses like
-                Web Development, Design, Marketing, and more.
+              <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
+                Learn from industry experts and enroll in skill-based courses like Web
+                Development, Design, Marketing, and more.
               </p>
 
-              <Link href="/courses" className="btn btn-primary">
-                Explore Courses
-              </Link>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link href="/courses" className="btn btn-primary rounded-full px-8">
+                  Explore Courses
+                </Link>
+
+                <Link href="/register" className="btn btn-outline rounded-full px-8 bg-white">
+                  Join Now
+                </Link>
+              </div>
+
+              <div className="mt-8 flex gap-6 text-sm text-slate-600">
+                <div>
+                  <p className="text-2xl font-black text-slate-900">6+</p>
+                  <p>Courses</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-slate-900">4.8</p>
+                  <p>Avg Rating</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-slate-900">1K+</p>
+                  <p>Learners</p>
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-white/60 rounded-[2rem] rotate-3"></div>
+
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop"
                 alt="Online Learning"
-                className="w-full h-[380px] object-cover"
+                className="relative w-full h-[380px] md:h-[450px] object-cover rounded-[2rem] shadow-2xl"
               />
+
+              <div className="absolute -bottom-6 left-6 bg-white rounded-2xl shadow-xl p-4">
+                <p className="font-bold text-slate-900">Learn from experts</p>
+                <p className="text-sm text-slate-500">Anytime, anywhere</p>
+              </div>
             </div>
           </div>
         </section>
