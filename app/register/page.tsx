@@ -15,15 +15,17 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [image, setImage] = useState("");
   const [password, setPassword] = useState("");
+  const [registering, setRegistering] = useState(false);
 
   useEffect(() => {
-    if (!isPending && session?.user) {
+    if (!registering && !isPending && session?.user) {
       router.push("/");
     }
-  }, [isPending, session, router]);
+  }, [isPending, session, router, registering]);
 
   async function handleRegister(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setRegistering(true);
 
     const res = await authClient.signUp.email({
       name,
@@ -33,12 +35,15 @@ export default function RegisterPage() {
     });
 
     if (res.error) {
+      setRegistering(false);
       toast.error(res.error.message || "Registration failed");
       return;
     }
 
-    toast.success("Registration successful 🎉");
-    router.push("/login");
+    await authClient.signOut();
+
+    toast.success("Registration successful. Please login.");
+    window.location.href = "/login";
   }
 
   async function handleGoogleLogin() {
@@ -48,7 +53,7 @@ export default function RegisterPage() {
     });
   }
 
-  if (isPending) {
+  if (isPending && !registering) {
     return (
       <div className="min-h-screen flex justify-center items-center">
         <span className="loading loading-spinner loading-lg text-primary"></span>
@@ -56,12 +61,11 @@ export default function RegisterPage() {
     );
   }
 
-  if (session?.user) return null;
+  if (!registering && session?.user) return null;
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-indigo-50 via-pink-50 to-cyan-50">
       <div className="w-full max-w-md bg-white shadow-2xl rounded-3xl p-8">
-        
         <div className="text-center">
           <h1 className="text-3xl font-black">
             Create Your <span className="text-primary">Account</span>
@@ -79,6 +83,7 @@ export default function RegisterPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            disabled={registering}
           />
 
           <input
@@ -88,6 +93,7 @@ export default function RegisterPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            disabled={registering}
           />
 
           <input
@@ -96,6 +102,7 @@ export default function RegisterPage() {
             placeholder="Profile Image URL (optional)"
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            disabled={registering}
           />
 
           <input
@@ -105,10 +112,15 @@ export default function RegisterPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            disabled={registering}
           />
 
-          <button className="btn btn-primary w-full rounded-xl mt-2">
-            Create Account
+          <button
+            type="submit"
+            disabled={registering}
+            className="btn btn-primary w-full rounded-xl mt-2"
+          >
+            {registering ? "Creating..." : "Create Account"}
           </button>
         </form>
 
@@ -116,6 +128,7 @@ export default function RegisterPage() {
 
         <button
           onClick={handleGoogleLogin}
+          disabled={registering}
           className="btn w-full flex items-center gap-2 justify-center rounded-xl border border-gray-300 bg-white hover:bg-gray-100"
         >
           <FcGoogle size={20} />
