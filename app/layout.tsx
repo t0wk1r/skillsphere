@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
+import PageLoader from "@/components/PageLoader";
 
 export const metadata: Metadata = {
   title: "SkillSphere",
@@ -15,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-        </Providers>
+        <PageLoader>
+          <Providers>
+            <Navbar />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </Providers>
+        </PageLoader>
       </body>
     </html>
   );
